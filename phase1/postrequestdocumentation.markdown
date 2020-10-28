@@ -1,5 +1,5 @@
 ---
-title: POST Request Documentnation
+title: POST Request Documentation
 date: 2020-10-28 14:20:00 -05:00
 ---
 
