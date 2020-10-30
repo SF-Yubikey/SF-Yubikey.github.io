@@ -6,7 +6,7 @@ position: 2
 
 # POST Request Documentation
 
-A collection of all the POST requests captured from the time one logs on and is prompted to change their password to when the authenticator is successfully applied can be found at https://www.getpostman.com/collections/3077f5d7a1acbee482b9. The collection organizes the POST requests into their roles, such as those used to apply an authenticator to the account. The POST requests used in TOTP enrollment process are found in the TOTP Enrollment folder, which is a subfolder of the Adding Authenticator Related folder.
+A collection of all the POST requests captured from the time one logs on and is prompted to change their password to when the authenticator is successfully applied can be found [here](https://www.getpostman.com/collections/3077f5d7a1acbee482b9). The collection organizes the POST requests into their roles, such as those used to apply an authenticator to the account. The POST requests used in TOTP enrollment process are found in the TOTP Enrollment folder, which is a subfolder of the Adding Authenticator Related folder.
 
 The three POST requests sent in the TOTP enrollment process are InitializeMobileAppRegistration, AddSecurityInfo, and VerifySecurityInfo. All three requests use JSON for their bodies.
 
