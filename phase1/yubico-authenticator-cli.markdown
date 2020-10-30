@@ -8,7 +8,7 @@ position: 1
 
 By Caleb Jiang
 
-This information is for Windows x64 only. Installation may differ for other OSs, but once the CLI is installed, everything else \*should\* work the same.
+This information is for Windows x64 only. Installation may differ for other OSs, but once the CLI is installed, everything else \*should\* work the same. In theory, with Termux USB, you should be able to plug a USB-C Yubikey into an Android phone and use Termux with ykman installed to be able to manage a Yubikey with full functionality.
 
 First download and install Yubikey Manager. [Windows x64 download](https://developers.yubico.com/yubikey-manager-qt/Releases/yubikey-manager-qt-latest-win64.exe)
 
@@ -22,7 +22,7 @@ The CLI can simply be accessed via the command prompt by changing the directory 
 
 ## How Yubico Authenticator interfaces with ykman
 
-Yubico Authenticator interfaces with ykman whenever it is launched, a Yubikey is inserted, or a credential is modified. (added or deleted) Because of this, any modifications to the credentials stored on the physical Yubikey will not be reflected in the application until one of the above actions (application restarted, Yubikey reinserted, or credential added) is taken. 
+Yubico Authenticator interfaces with ykman whenever it is launched, a Yubikey is inserted, or a credential is modified. (added or deleted) Because of this, any modifications to the credentials stored on the physical Yubikey will not be reflected in the application until one of the above actions (application restarted, Yubikey reinserted, or credential added) is taken.
 
 ## Managing and modifying the stored credentials
 
