@@ -32,7 +32,7 @@ Yubico Authenticator interfaces with ykman whenever it is launched, a Yubikey is
 
 **ykman oath list** for a list of the names of all stored credentials.
 
-**ykman oath code **for a list of the names and current TOTP codes of all stored credentials.
+**ykman oath code** for a list of the names and current TOTP codes of all stored credentials.
 
 ## Accessing the CLI programmatically
 
