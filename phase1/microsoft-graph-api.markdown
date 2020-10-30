@@ -8,4 +8,5 @@ In order to find a way to avoid using Microsoft Authenticator when performing an
 
 # Azure AD Graph API
 The first problem with using this API comes up right away.
-[AzureADAPIwarning.PNG](/uploads/AzureADAPIwarning.PNG)
+![AzureADAPIwarning.PNG]
+(/uploads/AzureADAPIwarning.PNG)
