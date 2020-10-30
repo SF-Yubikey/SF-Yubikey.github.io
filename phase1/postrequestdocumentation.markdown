@@ -22,8 +22,16 @@ VerifySecurityInfo occurs when one clicks next in the screenshot below. VerifySe
 
 ![VerifySecurityInfo.png](/uploads/VerifySecurityInfo.png)
 
-After looking into the POST requests during the TOTP process, we found that bypassing the process is not possible. If one opts to use the Microsoft authenticator, the VerifySecurityInfo request is repeatedly sent until one interacts with the Microsoft authenticator application on their phone. If one opts to use a third-party authenticator application, the TOTP secret that is generated is sent in VerifySecurityInfo’s body.
+After looking into the POST requests during the TOTP process, we found that bypassing or automating the process is not possible because the VerifySecurityInfo request requires interaction with an authenticator. If one opts to use the Microsoft authenticator, the VerifySecurityInfo request is repeatedly sent until one interacts with the Microsoft authenticator application on their phone. If one opts to use a third-party authenticator application, the TOTP secret that is generated is sent in VerifySecurityInfo’s body.
 
 ## Replaying the POST requests
 
-We attempted to replay the post request that replied with the TOTP secret so that we could automate the enrollment process, but ran into problems with replaying the request. When replaying the ![unknown.png](/uploads/unknown.png)
+We attempted to replay the post request that replied with the TOTP secret so that we could automate the enrollment process, but ran into problems with replaying the request. In the browser, during the enrollment process, the following is the response:
+
+`)]}',
+`\
+`{"RegistrationType":3,"QrCode":"(base64 of QR code png trimmed for brevity)","ActivationCode":null,"Url":null,"SameDeviceUrl":"","AccountName":"SF Insider:cjiang@sfinsider.onmicrosoft.com","SecretKey":"zdndcldvxwmb7nfv","AffinityRegion":null}`
+
+There is a clearly identifiable SecretKey in the JSON that can be used in the challenge response to enroll the MFA method. However, when replaying the request, with the same headers and body to the same web server just seconds afterwards, 
+
+![unknown.png](/uploads/unknown.png)
