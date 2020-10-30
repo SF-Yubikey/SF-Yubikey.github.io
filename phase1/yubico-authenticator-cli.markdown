@@ -21,3 +21,5 @@ The CLI can simply be accessed via the command prompt by changing the directory 
 Yubico Authenticator interfaces with ykman whenever 
 
 ## Adding a new credential
+
+![addCred.bat](/uploads/addCred.bat)
