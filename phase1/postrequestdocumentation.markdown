@@ -22,8 +22,8 @@ VerifySecurityInfo occurs when one clicks next in the screenshot below. VerifySe
 
 ![VerifySecurityInfo.png](/uploads/VerifySecurityInfo.png)
 
-After looking into the POST requests during the TOTP process, we found that bypassing or automating the process is not possible because the VerifySecurityInfo request requires interaction with an authenticator. If one opts to use the Microsoft authenticator, the VerifySecurityInfo request is repeatedly sent until one interacts with the Microsoft authenticator application on their phone. If one opts to use a third-party authenticator application, the TOTP secret that is generated is sent in VerifySecurityInfo’s body.
+After looking into the POST requests during the TOTP process, we found that bypassing the process is not possible. If one opts to use the Microsoft authenticator, the VerifySecurityInfo request is repeatedly sent until one interacts with the Microsoft authenticator application on their phone. If one opts to use a third-party authenticator application, the TOTP secret that is generated is sent in VerifySecurityInfo’s body.
 
 ## Replaying the POST requests
 
-We attempted to replay the post request that replied with the secret key
+We attempted to replay the post request that replied with the TOTP secret so that we could automate the enrollment process, but ran into problems with replaying the request. When replaying the ![unknown.png](/uploads/unknown.png)
