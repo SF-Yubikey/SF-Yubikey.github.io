@@ -39,7 +39,7 @@ Update user was the most straight forward option to check. Unfortunately we are 
 In beta we found exactly what we need. There's only one caveat: it's only in preview [[7]](https://docs.microsoft.com/en-us/graph/whats-new-overview). 
 ![New Oct 2020 Graph features](/uploads/gaph%20api%20grail.PNG)
 
-We were frustratingly close to delivering a resounding "Yes! This is possible through the Microsoft Graph API." Unfortunately, it just isn't there yet.
+We were frustratingly close to delivering a resounding "Yes! This is possible through the Microsoft Graph API." Unfortunately, the only authentication method we are able to change are fido2 security key information and passwordless signin with microsoft authenticator [[8]](https://docs.microsoft.com/en-us/graph/api/resources/authenticationmethodspolicies-overview?view=graph-rest-beta&preserve-view=true).
 
 # Conclusion
 Can the Microsoft Graph API be used to modify/add authentication information to users who haven't had their initial login, or need to set up MFA? Not yet. The features are coming and may very well be here soon, but in the current version of the API it just isn't possible. 
