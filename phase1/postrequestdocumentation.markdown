@@ -1,7 +1,7 @@
 ---
 title: POST Request Documentation
 date: 2020-10-28 14:20:00 -05:00
-position: 1
+position: 2
 ---
 
 A collection of all the POST requests captured from the time one logs on and is prompted to change their password to when the authicator is successfully applied can be found at https://www.getpostman.com/collections/3077f5d7a1acbee482b9. The collection organizes the POST requests into their roles, such as those used to apply an authenticator to the account. The POST requests used in TOTP enrollment process are found in the TOTP Enrollment folder, which is a subfolder of the Adding Authenticator Related folder.  
