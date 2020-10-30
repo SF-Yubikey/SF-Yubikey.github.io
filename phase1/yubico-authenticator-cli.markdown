@@ -36,4 +36,4 @@ Yubico Authenticator interfaces with ykman whenever it is launched, a Yubikey is
 
 ## Accessing the CLI programmatically
 
-Credentials can be added and accessed programmatically by writing and calling a batch file. For example in Java, you can use **Runtime. getRuntime(). exec(batchFileName, null, new File("."));** to run a batch file. From the batch file, you can **cd C:\\Program Files\\Yubico\\YubiKey Manager** and run the necessary commands to add a credential or grab codes from there. You can pass in the necessary parameters and read the output with **process.waitFor()** and** BufferedReader **to get the output.
+Credentials can be added and accessed programmatically by writing and calling a batch file. For example in Java, you can use **Runtime. getRuntime(). exec(batchFileName, null, new File("."));** to run a batch file. From the batch file, you can **cd C:\\Program Files\\Yubico\\YubiKey Manager** and run the necessary commands to add a credential or grab codes from there. You can pass in the necessary parameters and read the output with **process.waitFor()** and **BufferedReader** to get the output.
