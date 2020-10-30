@@ -36,3 +36,10 @@ In v1.0, the most promising methods were update user, create user, and update se
 
 Update user was the most straight forward option to check. Unfortunately we are unable to modify authentication information except for the password[[4]](https://docs.microsoft.com/en-us/graph/api/user-update?view=graph-rest-1.0&tabs=http). Next, we checked if we can use create user to make a user account that already has the information. This also proved to not be possible [[5]](https://docs.microsoft.com/en-us/graph/api/user-post-users?view=graph-rest-1.0&tabs=http). Lastly, we gave update settings a good look. Once again we were unable to use this to change the users authentication information [[6]](https://docs.microsoft.com/en-us/graph/api/usersettings-update?view=graph-rest-1.0).
 
+In beta we found exactly what we need. There's only one caveat: it's only in preview [[7]](https://docs.microsoft.com/en-us/graph/whats-new-overview). 
+![New Oct 2020 Graph features](/uploads/gaph%20api%20grail.PNG)
+
+We were frustratingly close to delivering a resounding "Yes! This is possible through the Microsoft Graph API." Unfortunately, it just isn't there yet.
+
+# Conclusion
+Can the Microsoft Graph API be used to modify/add authentication information to users who haven't had their initial login, or need to set up MFA? Not yet. The features are coming and may very well be here soon, but in the current version of the API it just isn't possible. 
