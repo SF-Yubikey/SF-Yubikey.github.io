@@ -9,8 +9,7 @@ In order to find a way to avoid using Microsoft Authenticator when performing an
 # Azure AD Graph API
 The first problem with using this API comes up right away.
 
-![AzureADAPIwarning.PNG]
-(/uploads/AzureADAPIwarning.PNG)
+![AzureADAPIwarning.PNG](/uploads/AzureADAPIwarning.PNG)
 
 As shown above, this API is no longer being worked on and is almost completely obsolete. This API still has fringe uses, so let's examine the operations it supports on user objects:
 * Create new user in a directory
