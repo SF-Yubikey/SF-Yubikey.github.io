@@ -4,6 +4,8 @@ date: 2020-10-31 06:53:00 -05:00
 position: 3
 ---
 
+# YubiEnterprise Delivery
+
 YubiEnterprise Delivery API is a REST API where a lot of things have been setup for easy user interactions. This guide will show you how to interact with the resources. The API allows you to view or edit resources in the system that pertain to accounts, authentication, organizations, users, purchaseOrders, inventory, shipments, addresses, countries and products.
 Upon obtaining the YubiEnterprise account and generating a new API token, make sure to copy the token and store it in a safe place. After leaving the page, the token is no longer viewable and the only thing that can be seen is the active token reference. YubiEnterprise Delivery Auditor account types are not able to revoke an API token and create another. 
 Navigating past the page will only give the active token reference, so make sure to copy the API token at the time of API token creation.
