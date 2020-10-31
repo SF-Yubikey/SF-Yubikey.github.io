@@ -2,6 +2,9 @@
 title: SF UTD Capstone Wiki Fall 2020
 timezone: America/Chicago
 collections:
+  posts:
+    title: Posts
+    output: true
   totp-enroll-requests:
     title: TOTP Enroll Requests
     output: true
