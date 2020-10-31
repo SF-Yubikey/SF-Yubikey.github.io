@@ -1,7 +1,7 @@
 ---
 title: Yubico Authenticator CLI
 date: 2020-10-30 04:45:00 -05:00
-position: 1
+position: 2
 ---
 
 # Yubico Authenticator CLI
