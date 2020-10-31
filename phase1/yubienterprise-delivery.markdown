@@ -25,12 +25,22 @@ curl "https://api.console.yubico.com/v1/shipments"
 
 ![2.png](/uploads/2.png)
 
-This specifically uses GET to obtain the list for all shipments and information regarding them.
+This specific example uses GET to obtain the list for all shipments and information regarding them.
+
+Change the end of the https to the corresponding action referred in the [apidocs.](https://console.yubico.com/apidocs/)
+
+For example, this action to list the shipments is a GET request, only asking for the return of information about the resource. The response then lists the information about all shipments. It uses the end of the https which is  /shipments
+
+![11.png](/uploads/11.png)
+
+Change this to whatever type of requests you want to make from the [apidocs.](https://console.yubico.com/apidocs/)
+
+https://api.console.yubico.com/v1/shipments \*change this\*
 
 To change the option add -X ACTION after the curl
 By default the example above uses GET.
 ACTIONS can be GET, POST, PUT, DELETE
-The \[apidocs\](https://console.yubico.com/apidocs/#section/Authentication) only supports these actions for use.
+The [apidocs](https://console.yubico.com/apidocs/) only supports these actions for use.
 
 Alternative option to test the API: (Reqbin API testing tool)
 From the previous example,
