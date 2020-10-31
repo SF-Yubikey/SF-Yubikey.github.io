@@ -1,0 +1,26 @@
+---
+title: SF UTD Capstone Wiki Fall 2020
+timezone: America/Chicago
+collections:
+  posts:
+    title: Posts
+    output: true
+  totp-enroll-requests:
+    title: TOTP Enroll Requests
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    permalink: "/posts/:title/"
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+permalink: pretty
