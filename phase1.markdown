@@ -1,7 +1,7 @@
 ---
 title: Phase 1
 date: 2020-10-28 05:25:00 -05:00
-position: 0
+position: 1
 ---
 
 [Yubico Authenticator CLI](/phase1/yubico-authenticator-cli/)
