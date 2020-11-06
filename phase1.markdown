@@ -8,7 +8,6 @@ position: 1
 
 [Microsoft Graph API](/phase1/microsoft-graph-api)
 
-[YubiEnterpise Delivery](/phase1/yubienterprise-delivery)
 
 ### TOTP Authenticator Enrollment
 
