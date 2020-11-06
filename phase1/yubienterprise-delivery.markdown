@@ -14,7 +14,7 @@ Navigating past the page will only give the active token reference, so make sure
 ![1.png](/uploads/1.png)
 
 Note: The token is very long and should not be short like the active token reference
-In the case that the API token is not stored, reset the account.
+In the case that the API token is not stored, reset the account. 
 
 Note: With the tokens, each one is scoped to specific regions such as US/CANADA and EU. The tokens can be used to ship only to their specific regions. So, in the case of making a request for a new shipment using a token from the US/CANADA region, the shipment can only be delivered within the US/CANADA region.
 
@@ -38,7 +38,7 @@ Change this to whatever type of requests you want to make from the [apidocs.](ht
 https://api.console.yubico.com/v1/shipments \*change this\*
 
 To change the option add -X ACTION after the curl
-By default the example above uses GET.
+By default the example above uses GET. GET, as it's name implies only gets information about the resource.
 ACTIONS can be GET, POST, PUT, DELETE
 The [apidocs](https://console.yubico.com/apidocs/) only supports these actions for use.
 
@@ -61,3 +61,23 @@ For carrier, it lists the shipping service used for one of the shipments as USPS
 A JSON view of the return looks like this:
 
 ![4.png](/uploads/4.png)
+
+Setting up your return as a JSON
+
+To do this with the curl method, you would need to add 
+
+What to do with the response message?
+
+In this part of the guide, I will be explaining one possible way to use the return from your GET request. 
+
+The message return can be in JSON format. So in this case, you could take the JSON return and turn it into a String.
+
+Then use the String however you want it, such as grabbing parts of the String and displaying it to the user.
+
+For example, if you need the carrier part of the string, you would only get that part of it and then choose how you want to display it to the user.
+
+Example of the GET message and working code with it:
+
+How to bulk deliver?
+
+\(Later)
