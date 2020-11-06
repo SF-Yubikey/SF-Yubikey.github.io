@@ -71,3 +71,5 @@ and the following body:
 `)]}',
 `\
 `{"CID":"dfbb61e8-ea76-4e8a-8f80-352555e77c41","Date":"2020-11-06T16:52:15.7582379Z","Exception":null}`
+
+Another interesting thing to note is that it doesn't seem like InitializeMobileAppRegistration is necessary at all, since you can fill in your own SecretKey into AddSecurityInfo's payload and it seems like everything works like normal.
