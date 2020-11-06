@@ -10,3 +10,9 @@ Request Headers
 Request Payload
 
 `{"Type":3,"VerificationContext":"SFRYsxesQfAjLiQzre6m4cDa9VMa0hJWo9pp9c+I1YJ1JKxwOGPRqQcbeqDUrgamgps1sFGSfL6MnefZeu5TEfjFL0iue0Sjr9RDNmVZcm84S9uC3sxBpvRSzuxN8d2DK1G+V/rrZulUiFnw8pw3SZgGcPmugh8OcwK9TV+X1c/sxuh1RgL7Dqy5YbY2C/YwpRtgota4uENjfnU3IxqB6Ee+s4jWe6Qg2Gw47v5IdVXliAmwC8RETPRuxpdLxkQFyUD890HTzA/4m0XqBr9ibvQfA3P/90e1weV/3cFlxPE=","VerificationData":"555526"}`
+
+Sample Response (from a different request)
+
+`)]}',
+`\
+`{"Type":3,"VerificationState":2,"DataUpdates":{"DefaultMethodOptions":3,"DefaultMethod":0},"ErrorCode":0}`
