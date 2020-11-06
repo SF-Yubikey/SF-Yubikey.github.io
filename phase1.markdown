@@ -8,8 +8,12 @@ position: 1
 
 [Microsoft Graph API](/phase1/microsoft-graph-api)
 
+[YubiEnterpise Delivery](/phase1/yubienterprise-delivery)
+
+### TOTP Authenticator Enrollment
+
 [POST Request Documentation](/phase1/postrequests)
 
 [Replaying POST Requests for Programmatic TOTP Enrollment](/phase1/replaying-post-requests-for-programmatic-totp-enrollment/)
 
-[YubiEnterpise Delivery](/phase1/yubienterprise-delivery)
+[Sample TOTP Enroll Post Requests](/phase1/sample-totp-enroll-post-requests/)
