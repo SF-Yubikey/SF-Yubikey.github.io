@@ -10,3 +10,57 @@ Request Headers
 Request Payload
 
 `{"Type":3,"Data":"{\"secretKey\":\"zg2ks7nmw75lfcxh\",\"affinityRegion\":null}"}`
+
+Sample Response (from a different request)
+
+`HTTP/1.1 200 OK
+`\
+`Cache-Control: public, max-age=0
+`\
+`Content-Type: application/json; charset=utf-8
+`\
+`Expires: Fri, 06 Nov 2020 16:48:52 GMT
+`\
+`Last-Modified: Fri, 06 Nov 2020 16:48:52 GMT
+`\
+`Vary: *
+`\
+`X-Frame-Options: SAMEORIGIN
+`\
+`X-XSS-Protection: 1; mode=block
+`\
+`x-ms-correlation-id: a91a84ca-fe36-42cb-b7ec-1939fb501877
+`\
+`x-ms-session-id: 96d2598d-f569-47a9-b4fb-5b06e5e74058
+`\
+`x-server: WCU
+`\
+`x-ms-gateway-requestid: d5ebd28c-acb8-49ba-9a3a-15ba8394143b
+`\
+`Access-Control-Allow-Origin: https://mysignins.microsoft.com
+`\
+`Access-Control-Allow-Credentials: true
+`\
+`Access-Control-Expose-Headers: x-ms-correlation-id, x-ms-session-id
+`\
+`Set-Cookie: x-server=WCU; path=/; secure; HttpOnly; SameSite=None
+`\
+`Set-Cookie: gatewaydc=san; path=/; secure; HttpOnly; SameSite=None
+`\
+`X-Content-Type-Options: nosniff
+`\
+`Strict-Transport-Security: max-age=31536000; includeSubDomains
+`\
+`Content-Security-Policy: frame-ancestors 'self';
+`\
+`X-UA-Compatible: IE=Edge
+`\
+`Date: Fri, 06 Nov 2020 16:48:53 GMT
+`\
+`Content-Length: 389`
+
+Body
+
+`)]}',
+`\
+`{"Type":3,"VerificationState":1,"Data":null,"VerificationContext":"C5LBw6HkKkyjOK4fYhgfzc2wZ8mWcxkVigEpCVB6fhsltrcFObiM3Jikj1OTQzuGQ+H04uxvirebIDcQuu8OquAT4SlE2+yKC2ZIRix/ejGcOSrWSn0sJ/cPKjEL0+g8oC0tGgRJbkIK8umvraihgGxIkhE4KNSzNUiybHbV8z7NboQftNEFIh6UmiK0vS1MG/1t3WwD9mqQAUhAo8dEfr/gL0+2I5nTKkR51PM/P5WaToeHyoacCJ/dURzRMtMtLRgFV0BrD51AMDq8HDdBsLF1Fv/eIEK7qCbk0QRcff4=","ErrorCode":0}`
