@@ -64,11 +64,11 @@ A JSON view of the return looks like this:
 
 ![4.png](/uploads/4.png)
 
-Setting up your return as a JSON
+**Setting up your return as a JSON**
 
 To do this with the curl method, you would need to add
 
-What to do with the response message?
+**What to do with the response message?**
 
 In this part of the guide, I will be explaining one possible way to use the return from your GET request.
 
@@ -78,10 +78,10 @@ Then use the String however you want it, such as grabbing parts of the String an
 
 For example, if you need the carrier part of the string, you would only get that part of it and then choose how you want to display it to the user.
 
-Example of the GET message and working code with it:
+**Example of the GET message and working code with it:**
 
 \(Edit later)
 
-How to bulk deliver?
+**How to bulk deliver?**
 
 \(Edit later)
