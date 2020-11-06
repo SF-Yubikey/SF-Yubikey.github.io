@@ -1,6 +1,7 @@
 ---
 title: Replaying POST Requests for Programmatic TOTP Enrollment
 date: 2020-11-06 10:17:00 -06:00
+position: 2
 ---
 
 # Replaying the POST requests
