@@ -1,7 +1,7 @@
 ---
 title: TOTP Enrollment POST Requests
 date: 2020-10-28 14:20:00 -05:00
-position: 3
+position: 4
 ---
 
 # POST Request Documentation
