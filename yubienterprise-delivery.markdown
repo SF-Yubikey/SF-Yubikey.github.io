@@ -1,7 +1,7 @@
 ---
 title: YubiEnterprise Delivery
 date: 2020-10-31 06:53:00 -05:00
-position: 3
+position: 2
 ---
 
 # YubiEnterprise Delivery
