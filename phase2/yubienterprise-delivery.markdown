@@ -13,7 +13,7 @@ Navigating past the page will only give the active token reference, so make sure
 
 ![1.png](/uploads/1.png)
 
-**Note: **The token is very long and should not be short like the active token reference
+\*\*Note: \*\*The token is very long and should not be short like the active token reference
 In the case that the API token is not stored, reset the account.
 
 **Note:** With the tokens, each one is scoped to specific regions such as US/CANADA and EU. The tokens can be used to ship only to their specific regions. So, in the case of making a request for a new shipment using a token from the US/CANADA region, the shipment can only be delivered within the US/CANADA region.
@@ -66,7 +66,7 @@ A JSON view of the return looks like this:
 
 **Setting up your return as a JSON**
 
-To do this with the curl method, you would need to add
+To do this with the curl method, you would need to add -H "Accept: application/json" as one of the headers
 
 **What to do with the response message?**
 
@@ -80,8 +80,34 @@ For example, if you need the carrier part of the string, you would only get that
 
 **Example of the GET message and working code with it:**
 
-\(Edit later)
-
 **How to bulk deliver?**
 
-\(Edit later)
+To bulk deliver, you would send a POST request with
+
+ ![](https://i.gyazo.com/645ac0dff11de93e674267a11477847a.png)
+
+When sending this request, you would need to add in a csv file for the request body.
+
+To find out the format of how this csv file would need to be setup we use a GET request to find the format of what the request body should look like.
+
+The response message gives us this: 
+
+Country code 2,Company,First name,Last name,Address 1,Address 2,Address 3,City,Region/State,Postcode,RecipientEmail,RecipientTelephone,DeliveryType,InventoryType,YubiKey 5 NFC,YubiKey 5 Nano,YubiKey 5C,YubiKey 5C Nano,Security Key by Yubico,Security Key NFC by Yubico.
+
+This GET response shows us an example of how the csv file should be setup when making the bulk order. 
+
+The template above is how the information is to be sent from the file.
+
+A response with status code of 200 OK means that the bulk deliver requests has successfully been made.
+
+A status code of 400 means that there was a problem with the bulk shipment request.
+
+*References:*
+
+https://console.yubico.com/help/API_Onboarding_Playbook.html
+
+https://console.yubico.com/help/
+
+https://console.yubico.com/apidocs/
+
+https://reqbin.com/
