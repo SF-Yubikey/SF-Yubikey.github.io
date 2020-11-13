@@ -79,7 +79,7 @@ Then use the String however you want it, such as grabbing parts of the String an
 For example, if you need the carrier part of the string, you would only get that part of it and then choose how you want to display it to the user.
 
 **Example of the GET message and working code with it:**
-[Code](phase2/programmatically-calling-api-with-java)
+[Example](phase2/programmatically-calling-api-with-java)
 
 **How to bulk deliver?**
 
