@@ -18,6 +18,8 @@ Two logs from the Chrome developer tools were captured. One log uses a third-par
 
 The three POST requests sent in the TOTP enrollment process are InitializeMobileAppRegistration, AddSecurityInfo, and VerifySecurityInfo. All three requests use JSON for their bodies.
 
+
+#### InitializeMobileAppRegistration
 InitializeMobileAppRegistration occurs when one clicks the next button in the screenshot below.
 
 ![InitializeMobileAppRegistrationCropped.png](/uploads/InitializeMobileAppRegistrationCropped.png)
@@ -32,6 +34,7 @@ If one chose to use a third-party authenticator, securityInfoType’s value is s
 
 By comparing the data found in the Wireshark log and the Chrome developer tools, it was determined that InitializeMobileAppRegistration corresponds to packet 359 of the Wireshark capture.
 
+#### AddSecurityInfo
 AddSecurityInfo occurs when one clicks the next button in the screenshot below.
 
 ![AddSecurityInfoCrop.png](/uploads/AddSecurityInfoCrop.png)
@@ -46,6 +49,8 @@ If one opted for  Microsoft's authenticator, their affinityRegion will have a va
 
 By comparing the Wireshark log with the Chrome developer's tool logs, it was determined that the   AddSecurityInfo corresponds to packet 535 of the Wireshark capture.
 
+
+#### VerifySecurityInfo
 VerifySecurityInfo occurs when one clicks next in the screenshot below.
 ![VerifySecurityInfoCropped.png](/uploads/VerifySecurityInfoCropped.png)
 
