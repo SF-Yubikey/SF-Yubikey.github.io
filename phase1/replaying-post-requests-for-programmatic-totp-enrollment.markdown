@@ -1,14 +1,16 @@
 ---
-title: Replaying POST Requests for Programmatic TOTP Enrollment
+title: Programmatic TOTP Enrollment
 date: 2020-11-06 10:17:00 -06:00
 position: 4
 ---
 
-# Replaying the POST requests
-
 By Caleb Jiang
 
-We were successfully able to replay the post request that replied with the TOTP secret so that we could automate the enrollment process. (YouTube demo, recommended to watch at 1.5x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
+Towards the end of my research, I discovered that besides self-service, [there is also an administrator batch registration method](https://support.yubico.com/hc/en-us/articles/360015669179-Using-YubiKeys-with-Azure-MFA-OATH-TOTP) of self-generating TOTP secrets and [Yubico being able to pre-program Yubikeys](https://www.yubico.com/products/manufacturing/programming-options/) with the secrets before shipping directly to a customer. Admins are able to directly import a csv of secret keys with corresponding upns into the Azure console to mass auto-enroll users with TOTP keys. This would easily solve the primary problem of bypassing the need for a mobile authenticator without the use of hacky workarounds or writing and running custom software.
+
+### Replaying the Requests
+
+We were successfully able to replay the POST requests used during the enrollment of a TOTP authenticator. ([YouTube demo](https://www.youtube.com/watch?v=Os1TCClk4aQ), recommended to watch at 1.5x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
 
 `)]}',`\
 `{"RegistrationType":3,"QrCode":"(base64 of QR code png trimmed for brevity)","ActivationCode":null,"Url":null,"SameDeviceUrl":"","AccountName":"SF Insider:cjiang@sfinsider.onmicrosoft.com","SecretKey":"zdndcldvxwmb7nfv","AffinityRegion":null}`
@@ -18,7 +20,7 @@ There is a clearly identifiable SecretKey (base32 TOTP secret) in the JSON that 
 `)]}',`\
 `{"Type":3,"VerificationState":1,"Data":null,"VerificationContext":"C5LBw6HkKkyjOK4fYhgfzc2wZ8mWcxkVigEpCVB6fhsltrcFObiM3Jikj1OTQzuGQ+H04uxvirebIDcQuu8OquAT4SlE2+yKC2ZIRix/ejGcOSrWSn0sJ/cPKjEL0+g8oC0tGgRJbkIK8umvraihgGxIkhE4KNSzNUiybHbV8z7NboQftNEFIh6UmiK0vS1MG/1t3WwD9mqQAUhAo8dEfr/gL0+2I5nTKkR51PM/P5WaToeHyoacCJ/dURzRMtMtLRgFV0BrD51AMDq8HDdBsLF1Fv/eIEK7qCbk0QRcff4=","ErrorCode":0}`
 
-When using the exact same headers as a recent request, the server responds as expected with HTTP 200 and a new TOTP token is enrolled, and verified working when signing in. After each token is enrolled, it is given a unique id in the form of `b80dab22-0294-43b9-b26b-2f8796024e86` that is used when the authentication method is modified or deleted.
+When using the exact same headers as a recent request, the server responds as expected with HTTP 200 and a new TOTP token is enrolled, and verified working when signing in. After each token is enrolled, it is given a unique id that looks like `b80dab22-0294-43b9-b26b-2f8796024e86`, used when the authentication method is modified or deleted.
 
 ### Unique Values Based on Session/User
 
@@ -42,3 +44,7 @@ If you get an HTTP error 500 with a response that looks like the one shown below
 
 `)]}',`\
 `{"CID":"dfbb61e8-ea76-4e8a-8f80-352555e77c41","Date":"2020-11-06T16:52:15.7582379Z","Exception":null}`
+
+### MFA Type Codes?
+
+Keith talked a little about RegistrationType codes in his post - the numbers used to describe what kind of authenticator is being enrolled in the initial InitializeMobileAppRegistration request. These registration type codes seem to be unique to InitializeMobileAppRegistration, however. When loading the security-info page, [AvailableAuthenticationInfo is called](/totp-enroll-requests/availableauthenticationinfo/) to get information about each authentication method. (i.e. whether it can be deleted, last updated time, CanBeDefault, CanAdd, etc.) Here, there's a different list of type codes that are used to identify each type of authenticator. MobilePhone is 4, Fido is 12, Email is 8, and AuthenticatorApp is 1.
