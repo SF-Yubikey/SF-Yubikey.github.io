@@ -5,3 +5,4 @@ position: 2
 ---
 
 [YubiEnterpise Delivery](/phase2/yubienterprise-delivery)
+[Test](phase2/programmatically-calling-api-with-java)
