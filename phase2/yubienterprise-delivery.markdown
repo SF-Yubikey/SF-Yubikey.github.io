@@ -82,7 +82,7 @@ For example, if you need the carrier part of the string, you would only get that
 
 This is one way to display the format to the user.
 
-For simplicity, I have setup up screenshots of the terminal console.
+For simplicity, I have setup up screenshots of the code and the resulting terminal console.
 
 **How to bulk deliver?**
 
