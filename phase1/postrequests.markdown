@@ -10,7 +10,7 @@ position: 5
 
 The Wireshark capture of the enrollment process is [Enrollmentcapture.pcapng](/uploads/Enrollmentcapture.pcapng), which uses [keylog.txt](/uploads/keylog.txt) for decryption adding the file as a (pre)-Master-Secret log filename in Wireshark. To set the (pre)-Master-Secret log, select edit on Wireshark's toolbar then select preferences. Under preferences, select protocols and scroll down to TLS and set keylog.txt as the (pre)-Master-Secret log filename.
 
-Two logs from the Chrome developer tools were captured. One log uses a third-party authenicator application, and its log can be found [here](/uploads/3rdPartyEnrollment.har). The other log uses a phone along with the Microsoft's autheincator application, which can be found [here](/uploads/MicrosoftauthenticatorEnrollment.har). Both har files starts capturing the after the one clicks next on the Help us protect your account page shown below and stops when after the enrollment process finishes.
+Two logs from the Chrome developer tools were captured. One log uses a third-party authenicator application, and its log can be found [here](/uploads/3rdPartyEnrollment.har). The other log uses a phone along with the Microsoft's autheincator application, which can be found [here](/uploads/MicrosoftauthenticatorEnrollment.har). Both har files starts capturing the after the one clicks next on the help us protect your account page shown below and stops when after the enrollment process finishes.
 
 ![helpstartcropped.png](/uploads/helpstartcropped.png)
 
@@ -18,8 +18,8 @@ Two logs from the Chrome developer tools were captured. One log uses a third-par
 
 The three POST requests sent in the TOTP enrollment process are InitializeMobileAppRegistration, AddSecurityInfo, and VerifySecurityInfo. All three requests use JSON for their bodies.
 
-
 #### InitializeMobileAppRegistration
+
 InitializeMobileAppRegistration occurs when one clicks the next button in the screenshot below.
 
 ![InitializeMobileAppRegistrationCropped.png](/uploads/InitializeMobileAppRegistrationCropped.png)
@@ -35,6 +35,7 @@ If one chose to use a third-party authenticator, securityInfoType’s value is s
 By comparing the data found in the Wireshark log and the Chrome developer tools, it was determined that InitializeMobileAppRegistration corresponds to packet 359 of the Wireshark capture.
 
 #### AddSecurityInfo
+
 AddSecurityInfo occurs when one clicks the next button in the screenshot below.
 
 ![AddSecurityInfoCrop.png](/uploads/AddSecurityInfoCrop.png)
@@ -49,8 +50,8 @@ If one opted for  Microsoft's authenticator, their affinityRegion will have a va
 
 By comparing the Wireshark log with the Chrome developer's tool logs, it was determined that the   AddSecurityInfo corresponds to packet 535 of the Wireshark capture.
 
-
 #### VerifySecurityInfo
+
 VerifySecurityInfo occurs when one clicks next in the screenshot below.
 ![VerifySecurityInfoCropped.png](/uploads/VerifySecurityInfoCropped.png)
 
