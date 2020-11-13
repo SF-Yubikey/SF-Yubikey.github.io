@@ -1,16 +1,16 @@
 ---
-title: Programmatic TOTP Enrollment
+title: Programmatic MFA Enrollment
 date: 2020-11-06 10:17:00 -06:00
 position: 4
 ---
 
 By Caleb Jiang
 
-Towards the end of my research, I discovered that besides self-service, [there is also an administrator batch registration method](https://support.yubico.com/hc/en-us/articles/360015669179-Using-YubiKeys-with-Azure-MFA-OATH-TOTP) of self-generating TOTP secrets and [Yubico being able to pre-program Yubikeys](https://www.yubico.com/products/manufacturing/programming-options/) with the secrets before shipping directly to a customer. Admins are able to directly import a csv of secret keys with corresponding upns into the Azure console to mass auto-enroll users with TOTP keys. This would easily solve the primary problem of bypassing the need for a mobile authenticator without the use of hacky workarounds or writing and running custom software.
+Towards the end of my research, I discovered that besides self-service, [there is also an administrator batch registration method](https://support.yubico.com/hc/en-us/articles/360015669179-Using-YubiKeys-with-Azure-MFA-OATH-TOTP) of self-generating TOTP secrets and [Yubico being able to pre-program Yubikeys](https://www.yubico.com/products/manufacturing/programming-options/) with the secrets before shipping directly to a customer. Admins are able to [directly upload a csv of secret keys with corresponding upns](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/hardware-oath-tokens-in-azure-mfa-in-the-cloud-are-now-available/ba-p/276466) into the Azure console to mass auto-enroll users with TOTP keys. This would easily solve the primary problem of bypassing the need for a mobile authenticator without the use of hacky workarounds or writing and running custom software.
 
 ### Replaying the Requests
 
-We were successfully able to replay the POST requests used during the enrollment of a TOTP authenticator. ([YouTube demo](https://www.youtube.com/watch?v=Os1TCClk4aQ), recommended to watch at 1.5x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
+We were successfully able to replay the POST requests used during the enrollment of a TOTP authenticator. ([YouTube demo](https://www.youtube.com/watch?v=Os1TCClk4aQ), watch at 2x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
 
 `)]}',`\
 `{"RegistrationType":3,"QrCode":"(base64 of QR code png trimmed for brevity)","ActivationCode":null,"Url":null,"SameDeviceUrl":"","AccountName":"SF Insider:cjiang@sfinsider.onmicrosoft.com","SecretKey":"zdndcldvxwmb7nfv","AffinityRegion":null}`
@@ -48,3 +48,7 @@ If you get an HTTP error 500 with a response that looks like the one shown below
 ### MFA Type Codes?
 
 Keith talked a little about RegistrationType codes in his post - the numbers used to describe what kind of authenticator is being enrolled in the initial InitializeMobileAppRegistration request. These registration type codes seem to be unique to InitializeMobileAppRegistration, however. When loading the security-info page, [AvailableAuthenticationInfo is called](/totp-enroll-requests/availableauthenticationinfo/) to get information about each authentication method. (i.e. whether it can be deleted, last updated time, CanBeDefault, CanAdd, etc.) Here, there's a different list of type codes that are used to identify each type of authenticator. MobilePhone is 4, Fido is 12, Email is 8, and AuthenticatorApp is 1.
+
+### Automating FIDO2 Enrollment?
+
+Currently there is no way of mass enrolling FIDO2 keys from the admin side in Azure. Even if there were, I don't even think this is theoretically possible because of the touch requirement for the Yubikey to generate an access key. The only way to pre-enroll the keys would be for IT staff to manually do it, and the speed at which IT staff could physically touch each key to enroll them, setting a pin, as well as track and deliver the correctly paired one to each employee even if all UI prompts were automated during the enrollment process just wouldn't be worth it. I did try to record and replay the HTTP requests, but the requests have to be completed within a modern browser to properly communicate with the OS to access the hardware-level APIs needed to interface with a USB or NFC device. (Yes, there is fallback to keyboard emulation in the spec, but I don't think Microsoft supports that, at least on Windows) Obviously, with headless Chromium, this is theoretically possible within a custom program, but users would still have to touch the security key themselves and set a pin, so all such a program would do is save a couple instances of clicking "next" and "ok." Especially if the first step of TOTP enrollment were already complete with one of the methods above, I don't think users would have that much difficulty clicking through some prompts and setting a pin themselves.
