@@ -82,8 +82,6 @@ For example, if you need the carrier part of the string, you would only get that
 
 This is one way to display the format to the user.
 
-For simplicity, I have setup up screenshots of the code and the resulting terminal console.
-
 **How to bulk deliver?**
 
 To make a bulk deliver request, you would send a POST request with
