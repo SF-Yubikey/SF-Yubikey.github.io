@@ -105,6 +105,16 @@ A response with status code of 200 OK means that the bulk deliver requests has s
 
 A status code of 400 means that there was a problem with the bulk shipment request.
 
+To check for validation of the CSV file, there are three fields that are able to be seen.
+
+\(lines-in-file, lines_read, and lines_parsable)
+
+lines-in-file = the number of lines in the file.
+
+lines_read = the number of lines from the file that were able to be read.
+
+lines_parsable = the number of lines that were parsed and successfully passed basic validation. 
+
 *References:*
 
 [https://console.yubico.com/help/API_Onboarding_Playbook.html](https://console.yubico.com/help/API_Onboarding_Playbook.html)
