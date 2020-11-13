@@ -8,7 +8,7 @@ position: 4
 
 By Caleb Jiang
 
-We were successfully able to replay the post request that replied with the TOTP secret so that we could automate the enrollment process. (YouTube demo, recommended to watch at 1.5x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
+We were successfully able to replay the post request that replied with the TOTP secret so that we could automate the enrollment process. ([YouTube demo](https://www.youtube.com/watch?v=Os1TCClk4aQ), recommended to watch at 1.5x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
 
 `)]}',`\
 `{"RegistrationType":3,"QrCode":"(base64 of QR code png trimmed for brevity)","ActivationCode":null,"Url":null,"SameDeviceUrl":"","AccountName":"SF Insider:cjiang@sfinsider.onmicrosoft.com","SecretKey":"zdndcldvxwmb7nfv","AffinityRegion":null}`
