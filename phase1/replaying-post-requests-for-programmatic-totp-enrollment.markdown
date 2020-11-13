@@ -1,10 +1,8 @@
 ---
-title: Replaying POST Requests for Programmatic TOTP Enrollment
+title: Programmatic TOTP Enrollment
 date: 2020-11-06 10:17:00 -06:00
 position: 4
 ---
-
-# Replaying the POST requests
 
 By Caleb Jiang
 
