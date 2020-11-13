@@ -1,12 +1,12 @@
 ---
-title: Programmatic TOTP Enrollment
+title: Programmatic MFA Enrollment
 date: 2020-11-06 10:17:00 -06:00
 position: 4
 ---
 
 By Caleb Jiang
 
-Towards the end of my research, I discovered that besides self-service, [there is also an administrator batch registration method](https://support.yubico.com/hc/en-us/articles/360015669179-Using-YubiKeys-with-Azure-MFA-OATH-TOTP) of self-generating TOTP secrets and [Yubico being able to pre-program Yubikeys](https://www.yubico.com/products/manufacturing/programming-options/) with the secrets before shipping directly to a customer. Admins are able to directly import a csv of secret keys with corresponding upns into the Azure console to mass auto-enroll users with TOTP keys. This would easily solve the primary problem of bypassing the need for a mobile authenticator without the use of hacky workarounds or writing and running custom software.
+Towards the end of my research, I discovered that besides self-service, [there is also an administrator batch registration method](https://support.yubico.com/hc/en-us/articles/360015669179-Using-YubiKeys-with-Azure-MFA-OATH-TOTP) of self-generating TOTP secrets and [Yubico being able to pre-program Yubikeys](https://www.yubico.com/products/manufacturing/programming-options/) with the secrets before shipping directly to a customer. Admins are able to [directly upload a csv of secret keys with corresponding upns](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/hardware-oath-tokens-in-azure-mfa-in-the-cloud-are-now-available/ba-p/276466) into the Azure console to mass auto-enroll users with TOTP keys. This would easily solve the primary problem of bypassing the need for a mobile authenticator without the use of hacky workarounds or writing and running custom software.
 
 ### Replaying the Requests
 
@@ -48,3 +48,5 @@ If you get an HTTP error 500 with a response that looks like the one shown below
 ### MFA Type Codes?
 
 Keith talked a little about RegistrationType codes in his post - the numbers used to describe what kind of authenticator is being enrolled in the initial InitializeMobileAppRegistration request. These registration type codes seem to be unique to InitializeMobileAppRegistration, however. When loading the security-info page, [AvailableAuthenticationInfo is called](/totp-enroll-requests/availableauthenticationinfo/) to get information about each authentication method. (i.e. whether it can be deleted, last updated time, CanBeDefault, CanAdd, etc.) Here, there's a different list of type codes that are used to identify each type of authenticator. MobilePhone is 4, Fido is 12, Email is 8, and AuthenticatorApp is 1.
+
+Aut
