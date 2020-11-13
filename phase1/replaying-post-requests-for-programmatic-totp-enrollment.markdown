@@ -8,6 +8,8 @@ position: 4
 
 By Caleb Jiang
 
+Towards the end of my research, I discovered that besides self-service, there is also an administrator batch registration method of self-generating TOTP secrets and Yubico being able to pre-program Yubikeys with the secrets before shipping directly to a customer. 
+
 We were successfully able to replay the post request that replied with the TOTP secret so that we could automate the enrollment process. ([YouTube demo](https://www.youtube.com/watch?v=Os1TCClk4aQ), recommended to watch at 1.5x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
 
 `)]}',`\
@@ -45,4 +47,4 @@ If you get an HTTP error 500 with a response that looks like the one shown below
 
 ### MFA Type Codes?
 
-Keith talked a little about RegistrationType codes in his post - the numbers used to describe what kind of authenticator is being enrolled in the initial InitializeMobileAppRegistration request. These registration type codes seem to be unique to InitializeMobileAppRegistration, however. When loading the security-info page, [AvailableAuthenticationInfo is called](/totp-enroll-requests/availableauthenticationinfo/) to get information about each authentication method. (i.e. whether it can be deleted, last updated time, CanBeDefault, CanAdd, etc.) Here, there's a different list of type codes that are used to identify each type of authenticator. MobilePhone is 4, Fido is 12, Email is 8, and AuthenticatorApp is 1. 
+Keith talked a little about RegistrationType codes in his post - the numbers used to describe what kind of authenticator is being enrolled in the initial InitializeMobileAppRegistration request. These registration type codes seem to be unique to InitializeMobileAppRegistration, however. When loading the security-info page, [AvailableAuthenticationInfo is called](/totp-enroll-requests/availableauthenticationinfo/) to get information about each authentication method. (i.e. whether it can be deleted, last updated time, CanBeDefault, CanAdd, etc.) Here, there's a different list of type codes that are used to identify each type of authenticator. MobilePhone is 4, Fido is 12, Email is 8, and AuthenticatorApp is 1.
