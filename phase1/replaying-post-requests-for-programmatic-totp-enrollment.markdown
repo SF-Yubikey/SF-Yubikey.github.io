@@ -10,7 +10,9 @@ By Caleb Jiang
 
 Towards the end of my research, I discovered that besides self-service, [there is also an administrator batch registration method](https://support.yubico.com/hc/en-us/articles/360015669179-Using-YubiKeys-with-Azure-MFA-OATH-TOTP) of self-generating TOTP secrets and [Yubico being able to pre-program Yubikeys](https://www.yubico.com/products/manufacturing/programming-options/) with the secrets before shipping directly to a customer. Admins are able to directly import a csv of secret keys with corresponding upns into the Azure console to mass auto-enroll users with TOTP keys. This would easily solve the primary problem of bypassing the need for a mobile authenticator without the use of hacky workarounds or writing and running custom software.
 
-We were successfully able to replay the post request that replied with the TOTP secret so that we could automate the enrollment process. ([YouTube demo](https://www.youtube.com/watch?v=Os1TCClk4aQ), recommended to watch at 1.5x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
+### Replaying the Requests
+
+We were successfully able to replay the POST requests used during the enrollment of a TOTP authenticator. ([YouTube demo](https://www.youtube.com/watch?v=Os1TCClk4aQ), recommended to watch at 1.5x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
 
 `)]}',`\
 `{"RegistrationType":3,"QrCode":"(base64 of QR code png trimmed for brevity)","ActivationCode":null,"Url":null,"SameDeviceUrl":"","AccountName":"SF Insider:cjiang@sfinsider.onmicrosoft.com","SecretKey":"zdndcldvxwmb7nfv","AffinityRegion":null}`
