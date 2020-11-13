@@ -44,3 +44,5 @@ If you get an HTTP error 500 with a response that looks like the one shown below
 `{"CID":"dfbb61e8-ea76-4e8a-8f80-352555e77c41","Date":"2020-11-06T16:52:15.7582379Z","Exception":null}`
 
 ### MFA Type Codes?
+
+Keith talked a little about RegistrationType codes in his post - the numbers used to describe what kind of authenticator is being enrolled in the initial InitializeMobileAppRegistration request. These registration type codes seem to be unique to InitializeMobileAppRegistration, however. When loading the security-info page, [AvailableAuthenticationInfo is called](/totp-enroll-requests/availableauthenticationinfo/) to get information about each authentication method. (i.e. whether it can be deleted, last updated time, CanBeDefault, CanAdd, etc.) 
