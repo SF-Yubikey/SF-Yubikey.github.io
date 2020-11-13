@@ -66,7 +66,7 @@ A JSON view of the return looks like this:
 
 **Setting up your return as a JSON**
 
-To do this with the curl method, you would need to add -H "Accept: application/json" as one of the headers
+To do this with the curl method, you would need to add --header "Accept: application/json" as one of the headers
 
 **What to do with the response message?**
 
