@@ -79,8 +79,7 @@ Then use the String however you want it, such as grabbing parts of the String an
 For example, if you need the carrier part of the string, you would only get that part of it and then choose how you want to display it to the user.
 
 **Example of the GET message and working code with it:**
-
-This is one way to display the format to the user.
+[Example](phase2/programmatically-calling-api-with-java)
 
 **How to bulk deliver?**
 
@@ -105,6 +104,16 @@ The template above is how the information is to be sent from the file.
 A response with status code of 200 OK means that the bulk deliver requests has successfully been made.
 
 A status code of 400 means that there was a problem with the bulk shipment request.
+
+To check for validation of the CSV file, there are three fields that are able to be seen.
+
+\(lines-in-file, lines_read, and lines_parsable)
+
+lines-in-file = the number of lines in the file.
+
+lines_read = the number of lines from the file that were able to be read.
+
+lines_parsable = the number of lines that were parsed and successfully passed basic validation. 
 
 *References:*
 
