@@ -10,7 +10,7 @@ position: 1
 
 ### Authenticator Enrollment
 
-[POST Request Documentation](/phase1/postrequests)
+[TOTP Enrollment POST Requests](/phase1/postrequests)
 
 [Programmatic MFA Enrollment](/phase1/replaying-post-requests-for-programmatic-totp-enrollment/)
 
