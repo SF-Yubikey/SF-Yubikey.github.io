@@ -16,7 +16,7 @@ Navigating past the page will only give the active token reference, so make sure
 \*\*Note: \*\*The token is very long and should not be short like the active token reference
 In the case that the API token is not stored, reset the account.
 
-**Note:** With the tokens, each one is scoped to specific regions such as US/CANADA and EU. The tokens can be used to ship only to their specific regions. So, in the case of making a request for a new shipment using a token from the US/CANADA region, the shipment can only be delivered within the US/CANADA region. Also, keep in mind that these** **tokens have a lifespan of 1 year.
+**Note:** With the tokens, each one is scoped to specific regions such as US/CANADA and EU. The tokens can be used to ship only to their specific regions. So, in the case of making a request for a new shipment using a token from the US/CANADA region, the shipment can only be delivered within the US/CANADA region. Also, keep in mind that these\*\* \*\*tokens have a lifespan of 1 year.
 
 **Authentication Example:**
 
@@ -86,7 +86,7 @@ This is one way to display the format to the user.
 
 To make a bulk deliver request, you would send a POST request with
 
- ![](https://i.gyazo.com/645ac0dff11de93e674267a11477847a.png)
+![](https://i.gyazo.com/645ac0dff11de93e674267a11477847a.png)
 
 When sending this request, you would need to add in a csv file for the request body.
 
@@ -94,11 +94,11 @@ To find out the format of how this csv file would need to be setup we use a GET 
 
 ![](https://i.gyazo.com/fe5c2076ac2f29c3b8a8eec501471020.png)
 
-The response message gives us this: 
+The response message gives us this:
 
 Country code 2,Company,First name,Last name,Address 1,Address 2,Address 3,City,Region/State,Postcode,RecipientEmail,RecipientTelephone,DeliveryType,InventoryType,YubiKey 5 NFC,YubiKey 5 Nano,YubiKey 5C,YubiKey 5C Nano,Security Key by Yubico,Security Key NFC by Yubico.
 
-This GET response shows us an example of how the csv file should be setup when making the bulk order. 
+This GET response shows us an example of how the csv file should be setup when making the bulk order.
 
 The template above is how the information is to be sent from the file.
 
