@@ -16,7 +16,7 @@ Navigating past the page will only give the active token reference, so make sure
 \*\*Note: \*\*The token is very long and should not be short like the active token reference
 In the case that the API token is not stored, reset the account.
 
-**Note:** With the tokens, each one is scoped to specific regions such as US/CANADA and EU. The tokens can be used to ship only to their specific regions. So, in the case of making a request for a new shipment using a token from the US/CANADA region, the shipment can only be delivered within the US/CANADA region.
+**Note:** With the tokens, each one is scoped to specific regions such as US/CANADA and EU. The tokens can be used to ship only to their specific regions. So, in the case of making a request for a new shipment using a token from the US/CANADA region, the shipment can only be delivered within the US/CANADA region. Also, keep in mind that these** **tokens have a lifespan of 1 year.
 
 **Authentication Example:**
 
