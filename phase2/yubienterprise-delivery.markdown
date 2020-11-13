@@ -80,6 +80,10 @@ For example, if you need the carrier part of the string, you would only get that
 
 **Example of the GET message and working code with it:**
 
+This is one way to display the format to the user.
+
+For simplicity, I have setup up screenshots of the terminal console.
+
 **How to bulk deliver?**
 
 To bulk deliver, you would send a POST request with
