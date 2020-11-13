@@ -22,7 +22,7 @@ There is a clearly identifiable SecretKey (base32 TOTP secret) in the JSON that 
 `)]}',`\
 `{"Type":3,"VerificationState":1,"Data":null,"VerificationContext":"C5LBw6HkKkyjOK4fYhgfzc2wZ8mWcxkVigEpCVB6fhsltrcFObiM3Jikj1OTQzuGQ+H04uxvirebIDcQuu8OquAT4SlE2+yKC2ZIRix/ejGcOSrWSn0sJ/cPKjEL0+g8oC0tGgRJbkIK8umvraihgGxIkhE4KNSzNUiybHbV8z7NboQftNEFIh6UmiK0vS1MG/1t3WwD9mqQAUhAo8dEfr/gL0+2I5nTKkR51PM/P5WaToeHyoacCJ/dURzRMtMtLRgFV0BrD51AMDq8HDdBsLF1Fv/eIEK7qCbk0QRcff4=","ErrorCode":0}`
 
-When using the exact same headers as a recent request, the server responds as expected with HTTP 200 and a new TOTP token is enrolled, and verified working when signing in. After each token is enrolled, it is given a unique id in the form of `b80dab22-0294-43b9-b26b-2f8796024e86` that is used when the authentication method is modified or deleted.
+When using the exact same headers as a recent request, the server responds as expected with HTTP 200 and a new TOTP token is enrolled, and verified working when signing in. After each token is enrolled, it is given a unique id that looks like `b80dab22-0294-43b9-b26b-2f8796024e86`, used when the authentication method is modified or deleted.
 
 ### Unique Values Based on Session/User
 
