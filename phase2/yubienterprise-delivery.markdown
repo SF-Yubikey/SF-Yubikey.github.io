@@ -104,10 +104,10 @@ A status code of 400 means that there was a problem with the bulk shipment reque
 
 *References:*
 
-https://console.yubico.com/help/API_Onboarding_Playbook.html
+[https://console.yubico.com/help/API_Onboarding_Playbook.html](https://console.yubico.com/help/API_Onboarding_Playbook.html)
 
-https://console.yubico.com/help/
+[https://console.yubico.com/help/](https://console.yubico.com/help/)
 
-https://console.yubico.com/apidocs/
+[https://console.yubico.com/apidocs/](https://console.yubico.com/apidocs/)
 
-https://reqbin.com/
+[https://reqbin.com/](https://reqbin.com/)
