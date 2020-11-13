@@ -1,6 +1,7 @@
 /*
  * Author: Joseph Steiger
  * Date: 11/13/2020
+ * Known Compatible Operating Systems: Windows 10
  * 
  * Purpose:
  * 		Demonstrate connecting to the Yubico Admin API
