@@ -86,13 +86,15 @@ For simplicity, I have setup up screenshots of the terminal console.
 
 **How to bulk deliver?**
 
-To bulk deliver, you would send a POST request with
+To make a bulk deliver request, you would send a POST request with
 
  ![](https://i.gyazo.com/645ac0dff11de93e674267a11477847a.png)
 
 When sending this request, you would need to add in a csv file for the request body.
 
 To find out the format of how this csv file would need to be setup we use a GET request to find the format of what the request body should look like.
+
+![](https://i.gyazo.com/fe5c2076ac2f29c3b8a8eec501471020.png)
 
 The response message gives us this: 
 
