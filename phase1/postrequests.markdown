@@ -8,7 +8,7 @@ position: 5
 
 ### Wireshark and Chrome Developer Tool Logs
 
-The Wireshark capture of the enrollment process is [Enrollmentcapture.pcapng](/uploads/Enrollmentcapture.pcapng), which uses [keylog.txt](/uploads/keylog.txt) for decryption adding the file as a (pre)-Master-Secret log filename in Wireshark. To set the (pre)-Master-Secret log, select edit on Wireshark's toolbar then select preferences. Under preferences, select protocols and scroll down to TLS and set keylog.txt as the (pre)-Master-Secret log filename.
+The Wireshark capture of the enrollment process is [Enrollmentcapture.pcapng](/uploads/Enrollmentcapture.pcapng), which uses [keylog.txt](/uploads/keylog.txt) for decryption by adding the file as a (pre)-Master-Secret log filename in Wireshark. To set the (pre)-Master-Secret log, select edit on Wireshark's toolbar then select preferences. Under preferences, select protocols and scroll down to TLS and set keylog.txt as the (pre)-Master-Secret log filename.
 
 Two logs from the Chrome developer tools were captured. One log uses a third-party authenticator application, and its log can be found [here](/uploads/3rdPartyEnrollment.har). The other log uses a phone along with the Microsoft's authenticator application, which can be found [here](/uploads/MicrosoftauthenticatorEnrollment.har). Both har files starts capturing the after the one clicks next on the help us protect your account page shown below and stops when after the enrollment process finishes.
 
@@ -32,7 +32,7 @@ If one chose to use a third-party authenticator, securityInfoType’s value is s
 
 ![InitializeMobileAppRegistration3party.png](/uploads/InitializeMobileAppRegistration3party.png)
 
-By comparing the data found in the Wireshark log and the Chrome developer tools, it was determined that InitializeMobileAppRegistration corresponds to packet 359 of the Wireshark capture.
+By comparing the Wireshark and Chrome's developer tool logs, it was determined that InitializeMobileAppRegistration corresponds to packet 359 of the Wireshark capture.
 
 #### AddSecurityInfo
 
@@ -48,7 +48,7 @@ If one opted to use Microsoft's authenticator application, their affinityRegion 
 
 ![AddSecurityInfophoneCrop.png](/uploads/AddSecurityInfophoneCrop.png)
 
-By comparing the Wireshark log with the Chrome developer's tool logs, it was determined that the AddSecurityInfo corresponds to packet 535 of the Wireshark capture.
+By comparing the Wireshark and Chrome's developer tool logs, it was determined that the AddSecurityInfo corresponds to packet 535 of the Wireshark capture.
 
 #### VerifySecurityInfo
 
