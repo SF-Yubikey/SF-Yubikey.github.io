@@ -1,5 +1,5 @@
 ---
-title: Programmatically Calling API with Java
+title: API Connection Demo (Java)
 date: 2020-11-13 07:28:00 -06:00
 position: 1
 ---
