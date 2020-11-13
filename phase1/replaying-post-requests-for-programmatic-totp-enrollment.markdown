@@ -10,7 +10,7 @@ Towards the end of my research, I discovered that besides self-service, [there i
 
 ### Replaying the Requests
 
-We were successfully able to replay the POST requests used during the enrollment of a TOTP authenticator. ([YouTube demo](https://www.youtube.com/watch?v=Os1TCClk4aQ), recommended to watch at 1.5x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
+We were successfully able to replay the POST requests used during the enrollment of a TOTP authenticator. ([YouTube demo](https://www.youtube.com/watch?v=Os1TCClk4aQ), watch at 2x speed and turn down the volume) In the browser, during the enrollment process, the following is the response:
 
 `)]}',`\
 `{"RegistrationType":3,"QrCode":"(base64 of QR code png trimmed for brevity)","ActivationCode":null,"Url":null,"SameDeviceUrl":"","AccountName":"SF Insider:cjiang@sfinsider.onmicrosoft.com","SecretKey":"zdndcldvxwmb7nfv","AffinityRegion":null}`
