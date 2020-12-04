@@ -14,6 +14,6 @@ position: 1
 
 [Programmatic MFA Enrollment](/phase1/replaying-post-requests-for-programmatic-totp-enrollment/)
 
-Bash and Batch Script for Programmatic TOTP Enrollment
+[Bash and Batch Script for Programmatic TOTP Enrollment](/phase1/bash-and-batch-script-for-programmatic-totp-enrollment/)
 
 [Sample TOTP Enroll Post Requests](/phase1/sample-totp-enroll-post-requests/)
