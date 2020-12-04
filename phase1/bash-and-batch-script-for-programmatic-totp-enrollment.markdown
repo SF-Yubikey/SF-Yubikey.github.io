@@ -1,6 +1,7 @@
 ---
 title: Bash and Batch Script for Programmatic TOTP Enrollment
 date: 2020-12-04 17:51:00 -06:00
+position: 2
 ---
 
 By Caleb Jiang
